@@ -1,4 +1,4 @@
-FROM alpine:3.13
+FROM alpine:edge
 LABEL maintainer="ITBM"
 
 RUN apk update
