@@ -1,7 +1,7 @@
 FROM alpine:3.13
 LABEL maintainer="ITBM"
 
-RUN apk update \
+RUN apk update --no-cache \
 	&& apk add coreutils \
 	&& apk add postgresql-client \
 	&& apk add python3 py3-pip && pip3 install --upgrade pip && pip3 install awscli \
