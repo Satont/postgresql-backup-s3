@@ -31,6 +31,6 @@ ENV DELETE_OLDER_THAN **None**
 
 WORKDIR /app
 
-ADD run.sh backup ./
+ADD run.sh backup.sh ./
 
 CMD ["sh", "run.sh"]
