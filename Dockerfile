@@ -1,11 +1,7 @@
 FROM alpine:3.19
 LABEL maintainer="Satont"
 
-RUN apk update
-RUN apk add apk add coreutils postgresql16-client aws-cli openssl curl
-
-RUN pip3 install --upgrade pip && pip3 install awscli
-RUN rm -rf /var/cache/apk/*
+RUN apk update && apk add coreutils postgresql16-client aws-cli openssl curl && rm -rf /var/cache/apk/*
 
 ENV POSTGRES_DATABASE **None**
 ENV POSTGRES_HOST **None**
