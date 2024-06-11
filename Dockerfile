@@ -1,13 +1,8 @@
-FROM alpine:edge
+FROM alpine:3.19
 LABEL maintainer="Satont"
 
 RUN apk update
-RUN apk add \
-	coreutils \
-	postgresql-client \
-	python3 \
-  py3-pip \
-	openssl 
+RUN apk add apk add coreutils postgresql16-client aws-cli openssl curl
 
 RUN pip3 install --upgrade pip && pip3 install awscli
 RUN rm -rf /var/cache/apk/*
