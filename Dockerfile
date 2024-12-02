@@ -1,4 +1,4 @@
-FROM alpine:3.19
+FROM alpine:20240807
 LABEL maintainer="Satont"
 
 RUN apk update && apk add coreutils postgresql17-client aws-cli openssl curl && rm -rf /var/cache/apk/*
